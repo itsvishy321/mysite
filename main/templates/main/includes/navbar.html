@@ -1,0 +1,19 @@
+<nav>
+  <div class="nav-wrapper #78909c blue-grey lighten-1">
+    <div class="container">
+      <a href="#" class="brand-logo">Logo</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down letter-spacing-1">
+        <li><a href="/">Home</a></li>
+        {% if user.is_authenticated %}
+        
+        <li><a href="/account"><ion-icon name="person-outline"></ion-icon> {{user.username}}</a></li>
+        <li><a href="/logout">Logout</a></li>
+        {% else %}
+        <li><a href="/register">Register</a></li>
+        <li><a href="/login">Login</a></li>
+        {% endif %}
+
+      </ul>
+    </div>
+  </div>
+</nav>

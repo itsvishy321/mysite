@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-9#21z2_!tk@ueh7%*au4eqb)mz)iyfikh-_-*-8c*z&2@j6q6&
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['.vercel.app' , '127.0.0.1']
+ALLOWED_HOSTS = ['*']
 
 
 TINYMCE_DEFAULT_CONFIG = {
@@ -94,8 +94,11 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'mysite',
+        'USER': 'postgres',
+        'PASSWORD': 'vishal41889',
+        'HOST': 'localhost', 
     }
 }
 
@@ -135,7 +138,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 STATICFILES_DIRS = [os.path.join(BASE_DIR, "ui/static")]
 STATIC_URL = 'static/'
-STATIC_ROOT = os.path.join(BASE_DIR, "ui/staticfiles")
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
+MEDIA_URLS ='/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')    
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field

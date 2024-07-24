@@ -22,5 +22,4 @@ class TutorialAdmin(admin.ModelAdmin):
 
 admin.site.register(TutorialSeries)    
 admin.site.register(TutorialCategory)    
-
 admin.site.register(Tutorials , TutorialAdmin)

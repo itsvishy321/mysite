@@ -37,7 +37,7 @@ def single_slug(request,single_slug):
                        "sidebar":tutorials_from_series,
                        "this_tutorial_index":this_tutorial_index})
     
-    return HttpResponse(f"{single_slug} does not correspond to anything.")
+    # return HttpResponse(f"{single_slug} does not correspond to anything.")
 
 
 

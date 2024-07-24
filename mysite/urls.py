@@ -24,4 +24,3 @@ urlpatterns = [
     path('tinymce/', include('tinymce.urls')),
 ]
 
-# urlpatterns += staticfiles_urlpatterns

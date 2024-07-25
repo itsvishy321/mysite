@@ -1,5 +1,5 @@
 {% extends 'main/header.html' %} {% block content %}
-<div class="row">
+<div class="row container">
   <div class="col s12 m8 l8">
     <h3>{{tutorial.tutorial_title}}</h3>
     <p style="font-size: 70%">Published {{tutorial.tutorial_published}}</p>
@@ -22,8 +22,7 @@
               <p>
                 <a href="/{{tutorial.tutorial_slug}}">
                   <button
-                    class="btn blue-grey darken-4 hoverable""
-                    style="color: #eee; text-transform: none;"
+                    class="custom-btn"
                   >
                     Go to Lecture
                   </button>

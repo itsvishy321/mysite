@@ -1,5 +1,10 @@
 <head>
   {% load static %}
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+
   <!-- Compiled and minified CSS -->
   <link
     rel="stylesheet"
@@ -10,22 +15,25 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
   <link rel="stylesheet" href="{% static 'tinymce/css/prism.css' %}" />
+  <link rel="stylesheet" href="{% static 'style.css' %}">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <!-- <link rel="stylesheet" href="style.css" /> -->
   
 </head>
 
-<body class="blue-grey lighten-5">
+<body>
   
   {% include "main/includes/navbar.html" %}
-
+  
   
   {% include "main/includes/messages.html" %}
-
-  <div class="container">
-    <br>
-    <br>
-    {% block content %}
-    {% endblock %}
+  <div class="wrapper">
+    <div class="content" style="height: auto;">
+      {% block content %}
+      {% endblock %}
+    </div>
+    
+    {% include "main/includes/footer.html" %}
   </div>
     
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>

@@ -14,16 +14,19 @@ def single_slug(request,single_slug):
         # It filters all those objects of TutorialSeries whose corresponding catgory_slug is same as single_slug
         matching_series = TutorialSeries.objects.filter(tutorial_category__category_slug=single_slug)
         
-        series_urls = {}    
+        series_urls = {} 
+        # print(matching_series)
+        series_category = matching_series[0].tutorial_category   
         for m in matching_series.all():
             # In Tutorials class tutorial_series is FK to the TutorialSeries class
             part_one = Tutorials.objects.filter(tutorial_series__tutorial_series=m.tutorial_series).earliest("tutorial_published")  
-            print(part_one)
-            series_urls[m] = part_one.tutorial_slug 
-        
+            # print(part_one)
+            series_urls[m] = part_one.tutorial_slug
+        # print(series_category)
         return render(request,
                       "main/category.html",
-                      {"part_ones": series_urls})
+                      {"part_ones": series_urls,
+                       "series_category":series_category})
     
     tutorials = [c.tutorial_slug for c in Tutorials.objects.all()]
     if single_slug in tutorials:

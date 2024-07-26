@@ -1,46 +1,52 @@
-<head>
-  {% load static %}
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TeachScript</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
-
-  <!-- Compiled and minified CSS -->
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
-  />
-
-  <!-- Compiled and minified JavaScript -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-
-  <link rel="stylesheet" href="{% static 'tinymce/css/prism.css' %}" />
-  <link rel="stylesheet" href="{% static 'style.css' %}">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <!-- <link rel="stylesheet" href="style.css" /> -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% load static %}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TeachScript</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
   
-</head>
-
-<body>
+    <!-- Compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
   
-  {% include "main/includes/navbar.html" %}
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   
+    <link rel="stylesheet" href="{% static 'tinymce/css/prism.css' %}" />
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+    
+  </head>
   
-  {% include "main/includes/messages.html" %}
-  <div class="wrapper">
-    <div class="content" style="height: auto;">
-      {% block content %}
-      {% endblock %}
+  <body>
+    
+    {% include "main/includes/navbar.html" %}
+    
+    
+    {% include "main/includes/messages.html" %}
+    <div class="wrapper">
+      <div class="content" style="height: auto;">
+        {% block content %}
+        {% endblock %}
+      </div>
+      
+      {% include "main/includes/footer.html" %}
     </div>
-    
-    {% include "main/includes/footer.html" %}
-  </div>
-    
-  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+      
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  
+    <script src="{% static 'tinymce/js/prism.js' %}"></script>
+    <script>M.AutoInit();</script>
+  </body>
+  
+  
 
-</body>
+</html>
 
-<script src="{% static 'tinymce/js/prism.js' %}"></script>
-<script>M.AutoInit();</script>

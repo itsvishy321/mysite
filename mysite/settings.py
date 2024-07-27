@@ -128,7 +128,7 @@ DATABASES = {
         'HOST': 'localhost', 
     }
 }
-# DATABASES["default"] = dj_database_url.parse("postgresql://mysite_sr0c_user:eHxUBSUBuWXXEaHSqokCmoYx0lNfSxy8@dpg-cqgg7ddds78s73cen3pg-a.oregon-postgres.render.com/mysite_sr0c")
+
 DATABASES['default'] = dj_database_url.parse(
     os.environ.get('DATABASE_URL', config("DATABASE_URL"))
 )

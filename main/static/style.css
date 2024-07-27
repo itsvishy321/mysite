@@ -46,15 +46,15 @@ footer.page-footer {
 }
 
 
-.gradient-overlay {
+/* .gradient-overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(rgb(0, 0, 0 ,0.2), rgb(0, 0, 0 ,0.2)); 
+    background: linear-gradient(rgb(0, 0, 0 ,0.15), rgb(0, 0, 0 ,0.15)); 
     pointer-events: none; 
-}
+} */
 
 .custom-btn,
 .custom-btn:focus {
@@ -72,8 +72,8 @@ footer.page-footer {
     z-index: 1;
     font-family: inherit;
     transition: all .3s;
-    background-color: rgba(255, 255, 255);
-    /* background-color: transparent; */
+    /* background-color: rgba(255, 255, 255); */
+    background-color: transparent;
    }
    
    .custom-btn::before {
@@ -97,3 +97,64 @@ footer.page-footer {
     color: white;
 }
 
+.vertical-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem 0;
+  }
+
+  .form-container {
+    background-color: #ffffff;
+  box-shadow: 0px 106px 42px rgba(0, 0, 0, 0.01),
+    0px 59px 36px rgba(0, 0, 0, 0.05), 0px 26px 26px rgba(0, 0, 0, 0.09),
+    0px 7px 15px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1);
+  /* border-radius: 11px; */
+    padding: 1.2rem 2.4rem;
+    width: 100%;
+    max-width: 600px;
+  }
+
+  .content__or-text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: 13px;
+    column-gap: 18px;
+    margin-top: 18px;
+  }
+  
+  .content__or-text span:nth-child(3),
+  .content__or-text span:nth-child(1) {
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: rgb(219, 219, 219);
+  }
+
+  .btn-google {
+    margin-top: 2rem;
+    /* width: 50%; */
+    padding: 0.8rem 1.6rem;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    gap: 10px;
+    border: 1px solid #ededef;
+    background-color: white;
+    color: #110F10;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+  }
+
+  .btn-google:hover {
+    /* background-color: #2d79f3; */
+    /* color: #fff; */
+    border: 1px solid #2d79f3;
+    ;
+  }
+  
+  
